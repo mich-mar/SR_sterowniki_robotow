@@ -598,7 +598,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
  .debug_line    0x0000000000000000      0x575 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
- .debug_str     0x0000000000000000    0xe069e CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+ .debug_str     0x0000000000000000    0xe0673 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
  .ARM.attributes
                 0x0000000000000000       0x39 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
@@ -669,7 +669,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
  .debug_line    0x0000000000000000      0x578 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
- .debug_str     0x0000000000000000    0xe06a1 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+ .debug_str     0x0000000000000000    0xe0676 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
  .ARM.attributes
                 0x0000000000000000       0x39 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
@@ -946,7 +946,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_line    0x0000000000000000      0xa78 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
- .debug_str     0x0000000000000000    0xe0d81 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
+ .debug_str     0x0000000000000000    0xe0d56 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .debug_frame   0x0000000000000000      0x204 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
  .ARM.attributes
@@ -1343,7 +1343,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_line    0x0000000000000000      0x909 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
- .debug_str     0x0000000000000000    0xe0b25 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
+ .debug_str     0x0000000000000000    0xe0afa CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .debug_frame   0x0000000000000000      0x204 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj
  .ARM.attributes
@@ -1446,7 +1446,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_line    0x0000000000000000      0xbc7 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
- .debug_str     0x0000000000000000    0xe0bab CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
+ .debug_str     0x0000000000000000    0xe0b80 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .debug_frame   0x0000000000000000      0x248 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c.obj
  .ARM.attributes
@@ -1520,7 +1520,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_line    0x0000000000000000      0x5a4 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
- .debug_str     0x0000000000000000    0xe07a8 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x0000000000000000    0xe077d CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x0000000000000000       0x50 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -1665,7 +1665,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .debug_line    0x0000000000000000      0x575 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
- .debug_str     0x0000000000000000    0xe069e CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
+ .debug_str     0x0000000000000000    0xe0673 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
  .ARM.attributes
                 0x0000000000000000       0x39 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj
@@ -1736,7 +1736,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .debug_line    0x0000000000000000      0x578 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
- .debug_str     0x0000000000000000    0xe06a1 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
+ .debug_str     0x0000000000000000    0xe0676 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
  .ARM.attributes
                 0x0000000000000000       0x39 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj
@@ -1834,7 +1834,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_line    0x0000000000000000      0xb60 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
- .debug_str     0x0000000000000000    0xe0b1a CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
+ .debug_str     0x0000000000000000    0xe0aef CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .debug_frame   0x0000000000000000      0x204 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj
  .ARM.attributes
@@ -1906,7 +1906,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .debug_line    0x0000000000000000      0x578 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
- .debug_str     0x0000000000000000    0xe06a1 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
+ .debug_str     0x0000000000000000    0xe0676 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
  .ARM.attributes
                 0x0000000000000000       0x39 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c.obj
@@ -2010,7 +2010,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_line    0x0000000000000000      0x74c CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
- .debug_str     0x0000000000000000    0xe0baa CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
+ .debug_str     0x0000000000000000    0xe0b7f CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .debug_frame   0x0000000000000000      0x230 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj
  .ARM.attributes
@@ -2353,7 +2353,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x44 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_macro   0x0000000000000000      0x330 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_line    0x0000000000000000      0x8ef CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
- .debug_str     0x0000000000000000    0xe0975 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
+ .debug_str     0x0000000000000000    0xe094a CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .debug_frame   0x0000000000000000      0x174 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj
  .ARM.attributes
@@ -2579,7 +2579,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x0000000000000000       0xce CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
  .debug_line    0x0000000000000000      0x516 CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
- .debug_str     0x0000000000000000     0x83a1 CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x0000000000000000     0x8376 CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
  .comment       0x0000000000000000       0x34 CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
  .debug_frame   0x0000000000000000      0x2ac CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj
  .ARM.attributes
@@ -3914,83 +3914,83 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
  .debug_line    0x000000000000d927      0x2c7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-reent.o)
  .debug_line    0x000000000000dbee      0x160 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-msizer.o)
 
-.debug_str      0x0000000000000000    0xe97a5
+.debug_str      0x0000000000000000    0xe977a
  .debug_str     0x0000000000000000      0x446 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
                                         0x55e (size before relaxing)
  .debug_str     0x0000000000000446       0xf0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
                                         0x20b (size before relaxing)
  .debug_str     0x0000000000000536       0xb1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
                                         0x1c0 (size before relaxing)
- .debug_str     0x00000000000005e7    0xe4d96 CMakeFiles/lab_02.dir/Core/Src/main.c.obj
-                                      0xe50ea (size before relaxing)
- .debug_str     0x00000000000e537d      0x20b CMakeFiles/lab_02.dir/Core/Src/gpio.c.obj
-                                      0xe09b2 (size before relaxing)
- .debug_str     0x00000000000e5588      0x2f0 CMakeFiles/lab_02.dir/Core/Src/usart.c.obj
-                                      0xe109a (size before relaxing)
- .debug_str     0x00000000000e5878       0xfc CMakeFiles/lab_02.dir/Core/Src/stm32l4xx_it.c.obj
-                                      0xe0853 (size before relaxing)
- .debug_str     0x00000000000e5974       0x6b CMakeFiles/lab_02.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                                      0xe091b (size before relaxing)
- .debug_str     0x00000000000e59df      0x934 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                                      0xe154b (size before relaxing)
- .debug_str     0x00000000000e6313      0xb1a CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
-                                      0xe146c (size before relaxing)
- .debug_str     0x00000000000e6e2d      0x459 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                                      0xe0eac (size before relaxing)
- .debug_str     0x00000000000e7286      0x42c CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
-                                      0xe0fe1 (size before relaxing)
- .debug_str     0x00000000000e76b2      0x159 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
-                                      0xe0a2a (size before relaxing)
- .debug_str     0x00000000000e780b      0x516 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
-                                      0xe0df9 (size before relaxing)
- .debug_str     0x00000000000e7d21      0x400 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
-                                      0xe1121 (size before relaxing)
- .debug_str     0x00000000000e8121       0x7f CMakeFiles/lab_02.dir/Core/Src/system_stm32l4xx.c.obj
-                                      0xe08b2 (size before relaxing)
- .debug_str     0x00000000000e81a0      0x511 CMakeFiles/lab_02.dir/Core/Src/sysmem.c.obj
-                                       0x55c6 (size before relaxing)
- .debug_str     0x00000000000e86b1       0x64 CMakeFiles/lab_02.dir/startup_stm32l476xx.s.obj
+ .debug_str     0x00000000000005e7    0xe4d6b CMakeFiles/lab_02.dir/Core/Src/main.c.obj
+                                      0xe50bf (size before relaxing)
+ .debug_str     0x00000000000e5352      0x20b CMakeFiles/lab_02.dir/Core/Src/gpio.c.obj
+                                      0xe0987 (size before relaxing)
+ .debug_str     0x00000000000e555d      0x2f0 CMakeFiles/lab_02.dir/Core/Src/usart.c.obj
+                                      0xe106f (size before relaxing)
+ .debug_str     0x00000000000e584d       0xfc CMakeFiles/lab_02.dir/Core/Src/stm32l4xx_it.c.obj
+                                      0xe0828 (size before relaxing)
+ .debug_str     0x00000000000e5949       0x6b CMakeFiles/lab_02.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                                      0xe08f0 (size before relaxing)
+ .debug_str     0x00000000000e59b4      0x934 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                                      0xe1520 (size before relaxing)
+ .debug_str     0x00000000000e62e8      0xb1a CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+                                      0xe1441 (size before relaxing)
+ .debug_str     0x00000000000e6e02      0x459 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                                      0xe0e81 (size before relaxing)
+ .debug_str     0x00000000000e725b      0x42c CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+                                      0xe0fb6 (size before relaxing)
+ .debug_str     0x00000000000e7687      0x159 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+                                      0xe09ff (size before relaxing)
+ .debug_str     0x00000000000e77e0      0x516 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+                                      0xe0dce (size before relaxing)
+ .debug_str     0x00000000000e7cf6      0x400 CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+                                      0xe10f6 (size before relaxing)
+ .debug_str     0x00000000000e80f6       0x7f CMakeFiles/lab_02.dir/Core/Src/system_stm32l4xx.c.obj
+                                      0xe0887 (size before relaxing)
+ .debug_str     0x00000000000e8175      0x511 CMakeFiles/lab_02.dir/Core/Src/sysmem.c.obj
+                                       0x559b (size before relaxing)
+ .debug_str     0x00000000000e8686       0x64 CMakeFiles/lab_02.dir/startup_stm32l476xx.s.obj
                                          0xb2 (size before relaxing)
- .debug_str     0x00000000000e8715       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
- .debug_str     0x00000000000e87c0       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
- .debug_str     0x00000000000e87c0       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
- .debug_str     0x00000000000e87c0       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_str     0x00000000000e86ea       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
+ .debug_str     0x00000000000e8795       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_str     0x00000000000e8795       0xab /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
+ .debug_str     0x00000000000e8795       0x2c /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
                                          0xa6 (size before relaxing)
- .debug_str     0x00000000000e87ec      0x544 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x00000000000e87c1      0x544 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
                                         0x647 (size before relaxing)
- .debug_str     0x00000000000e8d30       0x30 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x00000000000e8d05       0x30 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
                                          0xaa (size before relaxing)
- .debug_str     0x00000000000e8d60       0x9b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-errno.o)
+ .debug_str     0x00000000000e8d35       0x9b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-errno.o)
                                         0x507 (size before relaxing)
- .debug_str     0x00000000000e8dfb       0xbd /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-snprintf.o)
+ .debug_str     0x00000000000e8dd0       0xbd /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-snprintf.o)
                                         0x55b (size before relaxing)
- .debug_str     0x00000000000e8eb8       0xa9 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-strlen.o)
+ .debug_str     0x00000000000e8e8d       0xa9 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-strlen.o)
                                          0xb5 (size before relaxing)
- .debug_str     0x00000000000e8f61      0x1d8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-findfp.o)
+ .debug_str     0x00000000000e8f36      0x1d8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-findfp.o)
                                         0x737 (size before relaxing)
- .debug_str     0x00000000000e9139      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_str     0x00000000000e910e      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-mallocr.o)
                                         0x5c0 (size before relaxing)
- .debug_str     0x00000000000e9271      0x289 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_str     0x00000000000e9246      0x289 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-svfprintf.o)
                                         0x855 (size before relaxing)
- .debug_str     0x00000000000e94fa       0x94 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_str     0x00000000000e94cf       0x94 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-vfprintf_i.o)
                                         0x7ec (size before relaxing)
- .debug_str     0x00000000000e958e       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-sbrkr.o)
+ .debug_str     0x00000000000e9563       0x32 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-sbrkr.o)
                                         0x516 (size before relaxing)
- .debug_str     0x00000000000e95c0       0x3c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memchr.o)
+ .debug_str     0x00000000000e9595       0x3c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memchr.o)
                                          0xaf (size before relaxing)
- .debug_str     0x00000000000e95fc       0x43 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memcpy.o)
+ .debug_str     0x00000000000e95d1       0x43 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memcpy.o)
                                          0xb6 (size before relaxing)
- .debug_str     0x00000000000e963f       0x66 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memmove.o)
+ .debug_str     0x00000000000e9614       0x66 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-memmove.o)
                                         0x1df (size before relaxing)
- .debug_str     0x00000000000e96a5       0x4c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-mlock.o)
+ .debug_str     0x00000000000e967a       0x4c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-mlock.o)
                                         0x52c (size before relaxing)
- .debug_str     0x00000000000e96f1       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-freer.o)
+ .debug_str     0x00000000000e96c6       0x24 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-freer.o)
                                         0x595 (size before relaxing)
- .debug_str     0x00000000000e9715       0x23 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_str     0x00000000000e96ea       0x23 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-reallocr.o)
                                         0x57f (size before relaxing)
- .debug_str     0x00000000000e9738       0x5e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-reent.o)
+ .debug_str     0x00000000000e970d       0x5e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-reent.o)
                                         0x53e (size before relaxing)
- .debug_str     0x00000000000e9796        0xf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-msizer.o)
+ .debug_str     0x00000000000e976b        0xf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg_nano.a(lib_a-nano-msizer.o)
                                         0x55d (size before relaxing)
 
 .debug_loc      0x0000000000000000     0x349b
