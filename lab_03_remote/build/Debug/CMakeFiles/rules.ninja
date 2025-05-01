@@ -35,7 +35,7 @@ rule C_COMPILER__lab_03_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__lab_03_Debug
-  command = $PRE_LINK && /usr/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03/STM32L476RGTx_FLASH.ld" --specs=nano.specs -Wl,-Map=lab_03.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = $PRE_LINK && /usr/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03_remote/STM32L476RGTx_FLASH.ld" --specs=nano.specs -Wl,-Map=lab_03.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -52,7 +52,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03 -B/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03/build/Debug
+  command = /usr/bin/cmake --regenerate-during-build -S/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03_remote -B/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03_remote/build/Debug
   description = Re-running CMake...
   generator = 1
 

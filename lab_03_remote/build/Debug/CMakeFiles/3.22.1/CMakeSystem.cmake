@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.8.0-57-generic")
+set(CMAKE_HOST_SYSTEM "Linux-6.8.0-58-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.8.0-57-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "6.8.0-58-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03/cmake/gcc-arm-none-eabi.cmake")
+include("/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03_remote/cmake/gcc-arm-none-eabi.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

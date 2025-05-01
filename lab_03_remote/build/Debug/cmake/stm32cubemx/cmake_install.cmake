@@ -1,4 +1,4 @@
-# Install script for directory: /home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03/cmake/stm32cubemx
+# Install script for directory: /home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_03_remote/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
