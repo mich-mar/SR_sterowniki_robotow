@@ -27,6 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,10 +48,19 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 uint16_t adc_value = 0;
 uint8_t adc_flag = 0;
 uint16_t dac_value = 0;
-uint8_t dac[] = {128, 176, 217, 245, 255, 245, 217, 176, 128, 79, 38, 10, 1, 10, 38, 79};
+uint8_t voltage_index = 0;
+
+ // Bufor dla DMA ADC
+uint16_t adc_buffer[1];
+
+// Zadane napięcia w woltach
+const float target_voltages[] = {0.5f, 1.5f, 1.7f, 2.5f, 3.3f};
+const uint8_t num_voltages = sizeof(target_voltages) / sizeof(target_voltages[0]);
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,6 +77,18 @@ int _write(int file, char *ptr, int len)
   return len;
 }
 
+// Konwersja napięcia na wartość surową DAC
+uint16_t voltage_to_dac(float voltage)
+{
+  return (uint16_t)((voltage * 4095.0f) / 3.3f);
+}
+
+// Konwersja wartości surowej DAC na napięcie V
+float convert_to_voltage(uint16_t value)
+{
+  return (float)value * (3.3f / 4095.0f);
+}
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
   if (hadc->Instance == ADC1)
@@ -75,12 +97,13 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     adc_flag = 1;
   }
 }
+
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
 
@@ -114,9 +137,10 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  // Inicjalizacja DAC z DMA
+  // Inicjalizacja DAC z pierwszą wartością napięcia
+  dac_value = voltage_to_dac(target_voltages[0]);
   HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, 0);
-  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)&dac[0], 16, DAC_ALIGN_8B_R);
+  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)&adc_buffer[0], 16, DAC_ALIGN_8B_R);
 
   // Start timera który będzie triggerował DAC
   HAL_TIM_Base_Start(&htim6);
@@ -142,17 +166,31 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
     if (adc_flag == 1)
     {
-      // printf("Zmierzona wartosc to: %d\r\n", adc_value);
-      printf("%d;\r\n", adc_value); // ploting on remotelab
-      adc_flag = 0;
+      // Obliczanie napięcia
+      float dac_voltage = target_voltages[voltage_index];
+      float adc_voltage = (float)adc_value * (3.3f / 4095.0f);
 
+      // Format wartości float
+      char voltage_str[20];
+      snprintf(voltage_str, sizeof(voltage_str), "%.2f", dac_voltage);
+      char adc_voltage_str[20];
+      snprintf(adc_voltage_str, sizeof(adc_voltage_str), "%.2f", adc_voltage);
+
+      // Format: nr indeksu;surową wartość DAC;DAC wyrażone w Voltach;surowa wartość ADC;pomiar ADC wyrażony w Voltach
+      printf("275417;%d;%s;%d;%s\r\n", dac_value, voltage_str, adc_value, adc_voltage_str);
+
+      // Następna wartość napięcia
+      voltage_index = (voltage_index + 1) % num_voltages;
+      dac_value = voltage_to_dac(target_voltages[voltage_index]);
+      HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dac_value);
+
+      adc_flag = 0;
       HAL_ADC_Start_IT(&hadc1);
     }
 
-    HAL_Delay(500);
+    HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
@@ -162,24 +200,24 @@ int main(void)
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-  */
+   */
   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -196,9 +234,8 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -215,9 +252,9 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -229,14 +266,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */

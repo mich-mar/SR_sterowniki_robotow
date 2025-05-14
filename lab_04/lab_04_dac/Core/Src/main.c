@@ -46,9 +46,16 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 uint16_t adc_value = 0;
 uint8_t adc_flag = 0;
 uint16_t dac_value = 0;
+uint8_t voltage_index = 0;
+
+// Zadane napięcia w woltach
+const float target_voltages[] = {0.5f, 1.5f, 1.7f, 2.5f, 3.3f};
+const uint8_t num_voltages = sizeof(target_voltages) / sizeof(target_voltages[0]);
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,10 +66,23 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 int _write(int file, char *ptr, int len)
 {
   HAL_UART_Transmit(&huart2, (uint8_t *)ptr, len, HAL_MAX_DELAY);
   return len;
+}
+
+// Konwersja napięcia na wartość surową dla DAC
+uint16_t voltage_to_dac(float voltage)
+{
+  return (uint16_t)((voltage * 4095.0f) / 3.3f);
+}
+
+// Konwersja wartości surowej DAC na napięcie
+float dac_to_voltage(uint16_t dac_val)
+{
+  return (float)dac_val * (3.3f / 4095.0f);
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
@@ -73,6 +93,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     adc_flag = 1;
   }
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -111,7 +132,8 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, 0);
+  dac_value = voltage_to_dac(target_voltages[0]);
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dac_value);
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
 
   HAL_ADC_Start_IT(&hadc1);
@@ -137,15 +159,25 @@ int main(void)
 
     if (adc_flag == 1)
     {
-      printf("Zadana wartosc to: %d\r\n", dac_value);
-      printf("Zmierzona wartosc to: %d\r\n", adc_value);
+      // Obliczanie napięcia
+      float dac_voltage = target_voltages[voltage_index];
+      float adc_voltage = (float)adc_value * (3.3f / 4095.0f);
+
+      // Format wartości float
+      char voltage_str[20];
+      snprintf(voltage_str, sizeof(voltage_str), "%.2f", dac_voltage);
+      char adc_voltage_str[20];
+      snprintf(adc_voltage_str, sizeof(adc_voltage_str), "%.2f", adc_voltage);
+
+      // Format: nr indeksu;surową wartość DAC;DAC wyrażone w Voltach;surowa wartość ADC;pomiar ADC wyrażony w Voltach
+      printf("275417;%d;%s;%d;%s\r\n", dac_value, voltage_str, adc_value, adc_voltage_str);
+
+      // Następna wartość napięcia
+      voltage_index = (voltage_index + 1) % num_voltages;
+      dac_value = voltage_to_dac(target_voltages[voltage_index]);
+      HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dac_value);
+
       adc_flag = 0;
-
-      dac_value += 50;
-      dac_value %= 300;
-
-      HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, dac_value);
-
       HAL_ADC_Start_IT(&hadc1);
     }
 
