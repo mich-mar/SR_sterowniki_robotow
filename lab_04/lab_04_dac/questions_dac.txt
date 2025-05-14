@@ -1,0 +1,18 @@
+1. Dlaczego wartości zadanej dla DAC odpowiada inna wartość zmierzona za pomocą ADC?
+
+    Z kodu można zauważyć, że:
+        DAC jest skonfigurowany w trybie 8-bitowym (DAC_ALIGN_8B_R)
+        Wartości DAC są inkrementowane o 50, z maksimum 300
+        ADC prawdopodobnie jest w trybie 12-bitowym (domyślne dla STM32)
+
+    Różnice w wartościach mogą wynikać z kilku czynników:
+
+a) Różnice w rozdzielczości:
+
+    DAC używa 8 bitów (zakres 0-255)
+    ADC używa 12 bitów (zakres 0-4095) Przez to ta sama wartość napięcia będzie reprezentowana przez różne wartości liczbowe.
+
+b) Różnice w napięciach referencyjnych:
+
+    Jeśli ADC i DAC używają różnych napięć referencyjnych, wartości będą się skalować inaczej
+    Na przykład: DAC może używać VDDA (typowo 3.3V) jako referencji, podczas gdy ADC może mieć inną referencję

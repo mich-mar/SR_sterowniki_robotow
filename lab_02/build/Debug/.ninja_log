@@ -10,12 +10,12 @@
 1	182	1744461549814198912	CMakeFiles/lab_02.dir/Core/Src/gpio.c.obj	1bbfc4fef19c0fe2
 8	228	1744461549860195154	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c.obj	71213ce4f10bdc85
 182	402	1744461550033181046	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c.obj	f4de411bab2e324b
-1	296	1744461549919190334	CMakeFiles/lab_02.dir/Core/Src/main.c.obj	6a0d80f0d309c209
+0	132	1745447550416409218	CMakeFiles/lab_02.dir/Core/Src/main.c.obj	6a0d80f0d309c209
 3	291	1744461549923190007	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj	c72167b264a43f42
 257	321	1744461549954187474	CMakeFiles/lab_02.dir/Core/Src/syscalls.c.obj	17a4fb8593efb4bf
 4	223	1744461549853195725	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c.obj	4047fbb3dcfa52c3
 9	311	1744461549940188618	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c.obj	faed56a08e9d981e
-418	504	1744461550133172954	lab_02.elf	a40a78ee5af7fe58
+132	298	1745447550579321929	lab_02.elf	a40a78ee5af7fe58
 208	413	1744461550045180075	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj	4c52fac23e8301b5
 208	399	1744461550031181208	CMakeFiles/lab_02.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c.obj	156611d81c0c45c7
 228	416	1744461550048179832	CMakeFiles/lab_02.dir/Core/Src/system_stm32l4xx.c.obj	ce3db427e082bf2a

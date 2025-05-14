@@ -1,0 +1,67 @@
+===============================================================================================================================================
+1. **Pytanie: Z jaką częstotliwością następuje przepełnienie licznika TIM6?**
+
+Aby obliczyć częstotliwość przepełnienia TIM6, musimy przeanalizować konfigurację zegara systemowego i ustawienia timera. Z kodu widzimy:
+
+System clock = 80 MHz
+
+Częstotliwość przepełnienia timera TIM6 zależy od:
+- Częstotliwości zegara systemowego (80 MHz)
+- Preskalera timera
+- Wartości przepełnienia (period)
+
+Jeżeli zakładamy typowe ustawienia dla generowania sygnału DAC:
+- Częstotliwość wyjściowa = 80 MHz / (prescaler * period)
+Dokładną wartość można sprawdzić w konfiguracji TIM6 w pliku `tim.c`.
+
+===============================================================================================================================================
+2. **Pytanie: Jak często należy próbkować sygnał, aby sprawdzić, czy DAC rzeczywiście generuje odpowiedni przebieg?**
+
+Częstotliwość próbkowania musi być co najmniej 2 razy większa niż najwyższa częstotliwość w sygnale
+
+f_próbkowania ≈ 2 * f_sygnału_DAC
+
+
+===============================================================================================================================================
+3. **Pytanie: Do jakich celów wykorzystywana jest tablica look–up table? Podaj co najmniej dwa przykłady.**
+
+a) Generowanie przebiegów okresowych:
+- Przechowywanie wartości sinusoidy
+- Generowanie innych przebiegów okresowych (trójkąt, piła)
+
+b) Inne przykłady zastosowań:
+- Przechowywanie wartości funkcji trygonometrycznych
+- Tablice korekcji nieliniowości przetworników
+- Implementacja funkcji matematycznych
+- Przechowywanie charakterystyk czujników
+- Tablice konwersji kodów (np. ASCII na inne formaty)
+
+
+===============================================================================================================================================
+4. **Pytanie: W jaki sposób można zmieniać częstotliwość generowanego sygnału? Czy wymagane jest stworzenie nowej tablicy look–up table?**
+
+Częstotliwość generowanego sygnału można zmieniać bez modyfikacji tablicy LUT przez zmianę konfiguracji Timer6:
+- Modyfikacja preskalera (PSC)
+- Zmiana wartości przepełnienia (ARR)
+
+
+===============================================================================================================================================
+5. **Pytanie: W jakim kierunku przesyłu danych został skonfigurowany kanał DMA dla DAC? Jak należało by skonfigurować żądanie DMA w przypadku, gdybyśmy chcieli odczytywać dane z ADC do pamięci?**
+
+Odpowiedź:
+1. Konfiguracja DMA dla DAC:
+```c
+HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)&dac[0], 16, DAC_ALIGN_8B_R);
+```
+- Kierunek: Pamięć → Peryferia (Memory-to-Peripheral)
+- Źródło: tablica `dac[]` w pamięci RAM
+- Cel: rejestr DAC
+
+2. Konfiguracja DMA dla ADC:
+- Kierunek byłby: Peryferia → Pamięć (Peripheral-to-Memory)
+- Źródło: rejestr danych ADC
+- Cel: bufor w pamięci RAM
+- Wymagane ustawienia:
+  - Circular mode dla ciągłego próbkowania
+  - Odpowiedni rozmiar danych (16-bit dla ADC)
+  - Przerwanie po zakończeniu transferu (opcjonalne)

@@ -1,0 +1,42 @@
+1. "Jak długo będzie trwał pomiar wartości analogowej dla zaproponowanej konfiguracji z rysunku 2 [12]? Od czego zależy czas trwania pomiaru?"
+
+Niestety nie widzę rysunku 2, do którego odnosi się pytanie, ale na podstawie kodu mogę wyjaśnić ogólne zasady pomiaru ADC:
+
+W przedstawionym kodzie:
+- Pomiar ADC jest wykonywany w trybie przerwań (HAL_ADC_Start_IT)
+- Czas pojedynczego pomiaru ADC zależy od kilku czynników:
+  - Częstotliwości taktowania ADC
+  - Wybranej rozdzielczości (np. 12 bitów)
+  - Czasu próbkowania (sampling time)
+  - Konfiguracji prescalera
+
+2. "Co się stanie gdy powyższa funkcja nie zostanie wywołana przed wejściem do pętli while(1)?"
+
+Jeśli funkcja `HAL_ADC_Start_IT(&hadc1)` nie zostanie wywołana przed wejściem do pętli while(1):
+- ADC nie rozpocznie konwersji
+- Przerwania ADC nie będą aktywne
+- W rezultacie `adc_flag` nigdy nie zostanie ustawiony na 1
+- Program będzie działał w pętli, ale nie będzie wykonywał żadnych pomiarów
+- Nie zobaczymy żadnych wartości wysyłanych przez UART
+
+3. "Dlaczego wartości zmierzone przez ADC zmieniają się"
+
+Wartości ADC mogą się zmieniać z kilku powodów:
+1. Naturalne zmiany mierzonego sygnału analogowego
+2. Szum elektryczny w układzie
+3. Niestabilność napięcia referencyjnego
+4. Wpływ temperatury na pomiar
+5. Interferencje zewnętrzne
+
+W przypadku naciskania przycisku (jak wspomniano w opisie dla portu PC13), zmiany wartości ADC mogą być spowodowane:
+- Zakłóceniami wprowadzanymi przez drgania mechaniczne przycisku
+- Zmianami w zasilaniu układu podczas naciskania przycisku
+- Sprzężeniami elektrycznymi między liniami sygnałowymi
+
+Odnośnie użycia programów terminalowych:
+- Termite lub PuTTY można skonfigurować do odbioru danych z następującymi parametrami:
+  - Prędkość: prawdopodobnie 115200 baud (należy sprawdzić konfigurację UART w projekcie)
+  - Bity danych: 8
+  - Bity stopu: 1
+  - Parzystość: None
+  - Flow control: None
