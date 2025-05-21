@@ -138,18 +138,6 @@ int main(void)
 
   HAL_ADC_Start_IT(&hadc1);
 
-  // Test UART
-  const char *testMsg = "System starting...\r\n";
-  if (HAL_UART_Transmit(&huart2, (uint8_t *)testMsg, strlen(testMsg), 1000) == HAL_OK)
-  {
-    // UART działa
-  }
-  else
-  {
-    // UART nie działa
-    Error_Handler();
-  }
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

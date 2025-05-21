@@ -1,0 +1,5 @@
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_04/lab_04_zadanie_domowe/CMakeFiles/lab_04_zadanie_domowe.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_04/lab_04_zadanie_domowe/CMakeFiles/edit_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_04/lab_04_zadanie_domowe/CMakeFiles/rebuild_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_04/lab_04_zadanie_domowe/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_04/lab_04_zadanie_domowe/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
