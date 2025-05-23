@@ -1,0 +1,5 @@
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_4b/lab_04b_pid/build/Debug/CMakeFiles/lab_04b_pid.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_4b/lab_04b_pid/build/Debug/CMakeFiles/edit_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_4b/lab_04b_pid/build/Debug/CMakeFiles/rebuild_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_4b/lab_04b_pid/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/michal/Documents/studia/sem_6/SR_sterowniki_robotów/lab_4b/lab_04b_pid/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
