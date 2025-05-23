@@ -185,6 +185,7 @@ int main(void)
 
     if (adc_flag == 1) // Sprawdź czy gotowa jest nowa konwersja ADC
     {
+      ctr++;
       adc_flag = 0; // Wyczyść flagę gotowości ADC
 
       // Wykonaj algorytm sterowania PID
