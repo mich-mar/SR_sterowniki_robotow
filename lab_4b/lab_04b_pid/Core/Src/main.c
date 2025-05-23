@@ -188,7 +188,7 @@ int main(void)
 
   // Inicjalizacja regulatora PID
   // Parametry: P=1.0, I=0.0, D=0.0, 10 bitów ułamkowych, czas próbkowania 1ms
-  pid_init(&pid, 1.0f, 0.0f, 0.0f, 10, 1);
+  pid_init(&pid, 1.0f, 0.6f, 0.05f, 10, 1);
 
   // Ustawienie ograniczeń składowych PID (ochrona anti-windup i nasycenia)
   pid.p_max = pid_scale(&pid, 4095);     // Maks. wyjście proporcjonalne = pełny zakres DAC
