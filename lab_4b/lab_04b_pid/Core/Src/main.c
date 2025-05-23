@@ -53,7 +53,14 @@ volatile int dac_value;       // Aktualna wartość wyjściowa DAC (setpoint z s
 volatile int dac_control;     // Wartość wyjściowa regulatora PID
 volatile uint16_t dac_index;  // Aktualny indeks w tablicy lookup sinusoidy
 volatile uint8_t dac_nperiod; // Licznik do generowania sinusoidy z odpowiednią prędkością
-#define dac_nperiod_max 100   // Maksymalna wartość licznika przed przejściem do następnego punktu sinusoidy
+#define dac_nperiod_max 40   // Maksymalna wartość licznika przed przejściem do następnego punktu sinusoidy
+float V_REF = 3.3f;
+
+// Parametry sinusoidy w zakresie 0.4V - 2.9V
+#define V_MIN 0.4f          // Minimalne napięcie sinusoidy [V]
+#define V_MAX 2.9f          // Maksymalne napięcie sinusoidy [V]
+#define V_AMPLITUDE ((V_MAX - V_MIN) / 2.0f)  // Amplituda sinusoidy [V]
+#define V_OFFSET (V_MIN + V_AMPLITUDE)         // Offset sinusoidy [V]
 
 cpid_t pid; // Instancja regulatora PID
 /* USER CODE END PV */
@@ -88,11 +95,30 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
   }
 }
 
+/* Funkcja przeliczająca surową wartość DAC na napięcie*/
+float raw_to_voltage(int raw_value)
+{
+  return (raw_value / 4095.0f) * V_REF;
+}
+
+/* Funkcja przeliczająca napięcie na surową wartość DAC */
+int voltage_to_raw(float voltage)
+{
+  return (int)((voltage / V_REF) * 4095.0f);
+}
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if (htim == &htim7)
   {
-    dac_value = sin_wave[dac_index];
+    uint16_t original_sine = sin_wave[dac_index];
+    
+    float normalized = (float)(original_sine - 1024) / (3071 - 1024);
+    
+    uint16_t v_min_raw = voltage_to_raw(0.4f);   // 0.4V w jednostkach DAC
+    uint16_t v_max_raw = voltage_to_raw(2.9f);  // 2.9V w jednostkach DAC
+    
+    dac_value = v_min_raw + (uint16_t)(normalized * (v_max_raw - v_min_raw));
 
     ++dac_nperiod;
     if (dac_nperiod >= dac_nperiod_max)
@@ -174,7 +200,7 @@ int main(void)
   pid.total_max = pid_scale(&pid, 4095); // Maks. całkowite wyjście PID = pełny zakres DAC
   pid.total_min = pid_scale(&pid, 0);    // Min. całkowite wyjście PID = 0 (DAC nie może być ujemny)
 
-  uint16_t ctr = 0;
+  uint16_t ctr = 0; // Licznik do wyświetlania wartości
 
   /* USER CODE END 2 */
 
@@ -185,7 +211,7 @@ int main(void)
 
     if (adc_flag == 1) // Sprawdź czy gotowa jest nowa konwersja ADC
     {
-      ctr++;
+      ctr++; // Inkremntowanie wartości do wyświetlania
       adc_flag = 0; // Wyczyść flagę gotowości ADC
 
       // Wykonaj algorytm sterowania PID
@@ -201,7 +227,8 @@ int main(void)
       // Pozwala to na monitorowanie i analizę wydajności systemu w czasie rzeczywistym
       if (ctr >= 100)
       {
-        printf("%d;%d;%d;\r\n", adc_value, dac_value, dac_control);
+        // printf("275417;%d;%d;%d;\r\n", adc_value, dac_value, dac_control);
+        printf("275417;%.2f;%.2f;%.2f;\r\n", raw_to_voltage(adc_value), raw_to_voltage(dac_value), raw_to_voltage(dac_control));
         ctr = 0;
       }
     }
